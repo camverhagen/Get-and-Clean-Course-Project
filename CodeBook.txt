@@ -1,59 +1,47 @@
 CodeBook
 =================
 
-The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+The following variables from the Samsung data have been mean() summarized by activity class and test subject through the run_analysis.R script
 
-Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
-
-Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
-
-These signals were used to estimate variables of the feature vector for each pattern:  
-'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
-
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
-
-The set of variables that were estimated from these signals are: 
-
-mean(): Mean value
-std(): Standard deviation
-mad(): Median absolute deviation 
-max(): Largest value in array
-min(): Smallest value in array
-sma(): Signal magnitude area
-energy(): Energy measure. Sum of the squares divided by the number of values. 
-iqr(): Interquartile range 
-entropy(): Signal entropy
-arCoeff(): Autorregresion coefficients with Burg order equal to 4
-correlation(): correlation coefficient between two signals
-maxInds(): index of the frequency component with largest magnitude
-meanFreq(): Weighted average of the frequency components to obtain a mean frequency
-skewness(): skewness of the frequency domain signal 
-kurtosis(): kurtosis of the frequency domain signal 
-bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
-angle(): Angle between to vectors.
-
-Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
-
-gravityMean
-tBodyAccMean
-tBodyAccJerkMean
-tBodyGyroMean
-tBodyGyroJerkMean
-
-The complete list of variables of each feature vector is available in 'features.txt'
+ activity.nme - Name of the activity the subject was performing
+ subject - The test subject related to the measurement. Range 1:30
+ tBodyAcc.mean...X - Avg Body acceleration on X axis of phone
+ tBodyAcc.mean...Y - Avg Body acceleration on Y axis of phone
+ tBodyAcc.mean...Z - Avg Body acceleration on Z axis of phone
+ tGravityAcc.mean...X - Avg Gravity acceleration on X axis of phone
+ tGravityAcc.mean...Y - Avg Gravity acceleration on Y axis of phone
+ tGravityAcc.mean...Z - Avg Gravity acceleration on Z axis of phone
+ tBodyAccJerk.mean...X - Avg acceleration jerk of the body on X axis of phone
+ tBodyAccJerk.mean...Y - Avg acceleration jerk of the body on Y axis of phone
+ tBodyAccJerk.mean...Z - Avg acceleration jerk of the body on Z axis of phone
+ tBodyGyro.mean...X - Avg Angular Velocity of Body on X axis of phone
+ tBodyGyro.mean...Y - Avg Angular Velocity of Body on Y axis of phone
+ tBodyGyro.mean...Z - Avg Angular Velocity of Body on Z axis of phone
+ tBodyGyroJerk.mean...X - Avg Angular Velocity Jerk of the Body on X axis of phone
+ tBodyGyroJerk.mean...Y - Avg Angular Velocity Jerk of the Body on Y axis of phone
+ tBodyGyroJerk.mean...Z - Avg Angular Velocity Jerk of the Body on Z axis of phone
+ tBodyAccMag.mean.. - Avg estimated body acceleration magnitude
+ tGravityAccMag.mean.. - Avg estimated gravity acceleration magnitude
+ tBodyAccJerkMag.mean.. - Avg estimated jerk of body acceleration magnitude
+ tBodyGyroMag.mean.. - Avg estimated angular velocity magnitued
+ tBodyGyroJerkMag.mean.. - Avg estimated jerk of body angular velocity magnitude
+ tBodyAcc.std...X - Avg standard deviation of body acceleration on X axis of phone
+ tBodyAcc.std...Y - Avg standard deviation of body acceleration on Y axis of phone
+ tBodyAcc.std...Z - Avg standard deviation of body acceleration on Z axis of phone
+ tGravityAcc.std...X - Avg standard deviation of gravity acceleration on X axis of phone
+ tGravityAcc.std...Y - Avg standard deviation of gravity acceleration on Y axis of phone
+ tGravityAcc.std...Z - Avg standard deviation of gravity acceleration on Z axis of phone
+ tBodyAccJerk.std...X - Avg standard deviation jerk of body acceleration on X axis of phone
+ tBodyAccJerk.std...Y - Avg standard deviation jerk of body acceleration on Y axis of phone
+ tBodyAccJerk.std...Z - Avg standard deviation jerk of body acceleration on Z axis of phone
+ tBodyGyro.std...X - Avg standard deviation of angular velocity on X axis of phone
+ tBodyGyro.std...Y - Avg standard deviation of angular velocity on Y axis of phone
+ tBodyGyro.std...Z - Avg standard deviation of angular velocity on Z axis of phone
+ tBodyGyroJerk.std...X - Avg standard deviation jerk of body angular velocity on X axis of phone
+ tBodyGyroJerk.std...Y - Avg standard deviation jerk of body angular velocity on Y axis of phone
+ tBodyGyroJerk.std...Z - Avg standard deviation jerk of body angular velocity on Z axis of phone
+ tBodyAccMag.std.. - Avg standard deviation of estimated body acceleration magnitude
+ tGravityAccMag.std.. - Avg standard deviation of estimated gravity acceleration magnitude
+ tBodyAccJerkMag.std.. - Avg standard deviation of estimated jerk of body acceleration magnitude
+ tBodyGyroMag.std.. - Avg standard deviation of estimated angular velocity magnitude
+ tBodyGyroJerkMag.std.. - Avg standard deviation of estimated jerk of body angular velocity magnitude
